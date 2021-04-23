@@ -1,10 +1,11 @@
+import { Typography } from '@material-ui/core'
 import React from 'react'
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <footer>
+            <Typography variant="subtitle1">ReservIn &copy;</Typography>
+        </footer>
     )
 }
 

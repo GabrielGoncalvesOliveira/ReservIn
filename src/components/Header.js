@@ -6,7 +6,7 @@ const Header = () => {
 
     <AppBar position="static">
         <Toolbar className='header'>
-            <Typography  variant="h6" style={{flexGrow:1}}>
+            <Typography variant="h6" style={{flexGrow:1, fontFamily: "'Merienda One', cursive"}}>
             ReservIn
             </Typography>
             <Button className="menu-button" href="/search" color="inherit">Pesquisa</Button>

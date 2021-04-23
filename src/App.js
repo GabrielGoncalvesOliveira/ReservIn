@@ -1,15 +1,20 @@
 import Header from './components/Header.js'
 import IndexBody from './components/IndexBody.js'
+import Footer from'./components/Footer.js'
+import Login from './components/Login.js'
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
-      
-      <IndexBody/>
 
-      {/*adicionar footer*/}
-    </div>
+  return (
+    <>
+        <Header/>
+        <main>
+          {/* <IndexBody/> */}
+          <Login/>
+        </main>
+        <Footer/>
+      
+    </>
   );
 }
 
