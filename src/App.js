@@ -2,6 +2,7 @@ import Header from './components/Header.js'
 import IndexBody from './components/IndexBody.js'
 import Footer from'./components/Footer.js'
 import Login from './components/Login.js'
+import Register from './components/Register.js'
 
 function App() {
 
@@ -9,8 +10,9 @@ function App() {
     <>
         <Header/>
         <main>
-          {/* <IndexBody/> */}
-          <Login/>
+          {/* {<IndexBody/>
+          <Login/>} */}
+          <Register/>
         </main>
         <Footer/>
       
