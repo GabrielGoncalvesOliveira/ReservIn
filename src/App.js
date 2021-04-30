@@ -11,8 +11,8 @@ function App() {
         <Header/>
         <main>
           {/* {<IndexBody/>
-          <Login/>} */}
-          <Register/>
+          <Login/> */}
+          <Register/> 
         </main>
         <Footer/>
       

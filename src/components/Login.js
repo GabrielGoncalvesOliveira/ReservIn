@@ -1,5 +1,6 @@
 import { Button, Grid, Input, Paper, TextField, Typography } from '@material-ui/core'
 import React, { useState } from 'react'
+import logo from '../ReservIn.png'
 
 const Login = () => {
     const[email, setEmail] = useState('')
@@ -14,7 +15,7 @@ const Login = () => {
             <Paper className="login-box">
                 <form autoComplete >
                     <Grid container justify="center" alignItems="center">
-                        <Typography style={{margin:20}} variant="h4">LOGO</Typography>
+                        <img src={logo} alt="logo" width="200" height="180"></img>
                     </Grid>
                     <Grid item>
                         <TextField autoComplete="on" fullWidth label="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>

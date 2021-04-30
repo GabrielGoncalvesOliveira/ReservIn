@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Grid, Typography, Paper, TextField, Button} from '@material-ui/core'
+import logo from '../ReservIn.png'
 
 const Register = () => {
 
@@ -54,6 +55,12 @@ const Register = () => {
                         </Grid>
                     </Grid>
                 </Paper>
+                <Grid container alignItems="center" justify="center">
+                    <img src={logo} alt="logo" width="250" height="250"></img>
+                </Grid>
+                    
+                
+                
             </Grid>
             <Grid item lg style={{margin:20}}>
                 <Paper>
