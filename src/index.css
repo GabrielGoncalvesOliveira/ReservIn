@@ -38,6 +38,55 @@ code {
   top: 0;
 }
 
+.headerDashboard{
+  display: table-cell;
+  padding: 10px;
+  background-color: #5A3B23;
+  color: #fff;
+  top: 0;
+}
+.HeaderDashboard{
+  width: 100%;
+  display: table;
+  
+}
+
+.Sidebar {
+  display: table-cell;
+  height: 100%;
+  background-color:#2F4050;
+  width: 120px;
+}
+
+.SidebarList{
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 55px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: small;
+}
+
+.SidebarList .row:hover{
+  cursor: pointer;
+  background-color: black;
+}
+
+.SidebarList #active {
+  background-color: black;
+}
+
 .menu-button{
   color: #fff;
   transition: 0.3s;
