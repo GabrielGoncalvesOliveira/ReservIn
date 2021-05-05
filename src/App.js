@@ -10,9 +10,9 @@ function App() {
     <>
         <Header/>
         <main>
-          {/* {<IndexBody/>
-          <Login/> */}
-          <Register/> 
+          <IndexBody/>
+          {/*<Login/> 
+          <Register/> */}
         </main>
         <Footer/>
       

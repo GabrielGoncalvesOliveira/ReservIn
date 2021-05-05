@@ -1,6 +1,8 @@
 import React from 'react'
 import {Grid, Paper, Typography} from '@material-ui/core'
 import SearchBar from './SearchBar'
+import restaurante1 from'../restaurante1.jpg';
+import logo from '../ReservIn.png';
 
 const IndexBody = () => {
     return (
@@ -12,27 +14,25 @@ const IndexBody = () => {
             </Grid>
             <Grid container style={{backgroundColor:"#3C281E", color:"#ffe"}}>
                 <Grid sm item style={{margin:20}}>
-                    <Paper style={{padding:10}}>
-                        <Typography variant="h6">IMAGEM</Typography>
-                        <Typography variant="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Aliquam velit est, lobortis sed pretium sit amet, mattis vel tortor. Vestibulum 
-                        viverra lorem vitae euismod sollicitudin. Proin purus leo, ultricies ut maximus at, 
-                        rutrum quis eros. Praesent tempor elit neque, in posuere dui pharetra in. Donec gravida 
-                        tortor eget lorem malesuada, id tempor arcu vehicula.
-                        </Typography>
-                    </Paper>
+                <img src={restaurante1} style={{borderRadius:8, height:'auto', width:'auto'}}></img>
                 </Grid>
                 <Grid sm item style={{margin:20}}>
-                    <Paper style={{padding:10}}>
-                        <Typography variant="h6">TEXTO</Typography>
-                        <Typography variant="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Aliquam velit est, lobortis sed pretium sit amet, mattis vel tortor. Vestibulum 
-                        viverra lorem vitae euismod sollicitudin. Proin purus leo, ultricies ut maximus at, 
-                        rutrum quis eros. Praesent tempor elit neque, in posuere dui pharetra in. Donec gravida 
-                        tortor eget lorem malesuada, id tempor arcu vehicula.
+                    
+                        <Typography variant="h4" style={{fontFamily:"'Merienda One', cursive"}}>O Melhor Para o seu Negócio</Typography>
+                        <Typography variant="h6" style={{marginTop:20, textAlign:'justify'}}>
+                            O ReservIn&copy; é um sistema inteligente de gerenciamento de reservas que auxilia tanto você cliente, que deseja realizar reservas
+                            em restaurantes de qualidade de forma simples, como também ajuda os estabelecimentos parceiros a manter controle de todas as reservas
+                            e seu andamento através do sistema, aumentando a produtividade e auxiliando na rapidez de seu serviço.
                         </Typography>
-                    </Paper>
+                        <Grid container alignContent="center" justify="center">
+                        <img src={logo} width="150" height="150"></img>
+                        </Grid>
+                        
+                    
                 </Grid>
+            </Grid>
+            <Grid container>
+                
             </Grid>
         </div>
         
