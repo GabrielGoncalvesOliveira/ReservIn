@@ -1,7 +1,11 @@
 import React from 'react'
 import {AppBar, Toolbar, IconButton, Typography, Button} from '@material-ui/core'
 
-const Header = () => {
+const Header = (headerclass) => {
+
+    
+
+
     return (
 
     <AppBar position="static">

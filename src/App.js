@@ -3,18 +3,20 @@ import IndexBody from './components/IndexBody.js'
 import Footer from'./components/Footer.js'
 import Login from './components/Login.js'
 import Register from './components/Register.js'
+import DashboardBody from './components/DashboardBody.js'
 
 function App() {
 
   return (
     <>
-        <Header/>
+        {/* <Header /> */}
         <main>
-          <IndexBody/>
-          {/*<Login/> 
+          <DashboardBody/>
+          {/*<IndexBody/>
+          <Login/> 
           <Register/> */}
         </main>
-        <Footer/>
+        {/* <Footer/> */}
       
     </>
   );
