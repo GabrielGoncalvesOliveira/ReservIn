@@ -2,8 +2,10 @@ import React from 'react'
 import {List, Divider, ListItem, ListItemIcon, ListItemText, Drawer, Button, AppBar, Toolbar, Typography} from '@material-ui/core'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
 import MailIcon from '@material-ui/icons/Mail'
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { makeStyles } from '@material-ui/core/styles'
+import ReservationTable from './ReservationTable'
+import {Link} from 'react-router-dom'
 
 
 const drawerWidth = 240;
@@ -44,7 +46,7 @@ const DashboardBody = () => {
                     <Button className="menu-button" href="/search" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Pesquisa</Button>
                     <Button className="menu-button" href="/about" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Sobre Nós</Button>
                     <Button className="menu-button" href="/cadastro" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Cadastro</Button>
-                    <Button className="menu-button" href="/login" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Login</Button>
+                    <Button to="/login" className="menu-button" href="/login" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Login</Button>
                 </Toolbar>
             </AppBar>
         <div className={classes.root}>
@@ -78,6 +80,9 @@ const DashboardBody = () => {
                 </List>
                 </div>
             </Drawer>
+        </div>
+        <div>
+              <ReservationTable/>
         </div>
         </>
     )

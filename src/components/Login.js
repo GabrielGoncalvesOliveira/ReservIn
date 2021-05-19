@@ -25,7 +25,7 @@ const Login = () => {
                     </Grid>
                     <Grid style={{marginTop:20}} container justify="center" alignItems="center" alignContent="center">
                         <Button size="medium" style={{backgroundColor:"#5A3B23", color:"#FFF", margin:20, padding:10}} href="/register">Cadastro</Button>
-                        <Button size="medium" style={{backgroundColor:"#5A3B23", color:"#FFF", margin:20, padding:10}} onClick={handleLogin()}>Login</Button>
+                        <Button size="medium" style={{backgroundColor:"#5A3B23", color:"#FFF", margin:20, padding:10}} href="/dashboard" onClick={handleLogin()}>Login</Button>
                     </Grid>
                 </form>
             </Paper>
