@@ -25,10 +25,9 @@ const ReservationTable = () => {
         },
         {
             field: "button",
-            description: "botãozao da brara",
             sortable: "false",
-            width:"160",
-            headerName: "Action",
+            width:"300",
+            headerName: "⠀⠀⠀⠀⠀Ações⠀⠀⠀⠀⠀",
             disableClickEventBubbling: true,
             renderCell: (params) => {
               const onClick = () => {
@@ -46,9 +45,11 @@ const ReservationTable = () => {
                 return alert(JSON.stringify(thisRow, null, 4));
               };
         
-              return <Button onClick={onClick}>Click</Button>;
+              return <><Button onClick={onClick}>Aprovar</Button><Button onClick={onClick}>Rejeitar</Button></>;
+              
             }
-        }
+        },
+        
       ];
       
       const rows = [
@@ -65,7 +66,7 @@ const ReservationTable = () => {
       
       
     return (
-        <div style={{marginLeft:360, height:440, width:800, marginTop:40}}>
+        <div style={{marginLeft:'65vh', height:438, width:790, marginTop:40}}>
             <Grid container justify="center" style={{marginBottom:20}}>
                 <Grid item>
                 <Typography variant="h4" style={{fontFamily:"'Merienda One', cursive"}}>RESERVAS A APROVAR</Typography>

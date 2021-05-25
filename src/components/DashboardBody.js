@@ -1,14 +1,19 @@
 import React from 'react'
 import {List, Divider, ListItem, ListItemIcon, ListItemText, Drawer, Button, AppBar, Toolbar, Typography} from '@material-ui/core'
-import InboxIcon from '@material-ui/icons/MoveToInbox'
-import MailIcon from '@material-ui/icons/Mail'
+
+import AccessTimeIcon from '@material-ui/icons/AccessTime'; //a aprovar
+import CheckCircleIcon from '@material-ui/icons/CheckCircle'; //aprovada
+import TodayIcon from '@material-ui/icons/Today'; //em andamento
+import EventAvailableIcon from '@material-ui/icons/EventAvailable'; // concluida
+import EventBusyIcon from '@material-ui/icons/EventBusy'; //cancelada
+
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { makeStyles } from '@material-ui/core/styles'
 import ReservationTable from './ReservationTable'
-import {Link} from 'react-router-dom'
+import {Link, BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 
 
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +38,26 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
 }));
+
+const loadReservasCanceladas = () =>{
+
+}
+
+const loadReservasAndamento = () =>{
+
+}
+
+const loadReservasAprovadas = () =>{
+
+}
+
+const loadReservasCocluidas = () =>{
+
+}
+
+const loadReservasNaoAprovadas = () =>{
+
+}
 
 const DashboardBody = () => {
     const classes = useStyles();
@@ -62,27 +87,35 @@ const DashboardBody = () => {
                 <Divider />
 
                 <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                    <ListItemText primary={text} />
+                
+                    <ListItem component="a" key="Reservas a Aprovar" href="/dashboard/reservas-a-aprovar">
+                    <ListItemIcon><AccessTimeIcon/></ListItemIcon>
+                    <ListItemText primary="Reservas a Aprovar" />
                     </ListItem>
-                ))}
-                </List>
-                <Divider />
-                <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                    <ListItemText primary={text} />
+                    <Divider/>
+                    <ListItem component="a" key="Reservas Aprovadas" href="/dashboard/reservas-aprovadas">
+                    <ListItemIcon><CheckCircleIcon/></ListItemIcon>
+                    <ListItemText primary="Reservas Aprovadas" />
                     </ListItem>
-                ))}
+                    <Divider/>
+                    <ListItem component="a" key="Reservas em Andamento" href="/dashboard/reservas-em-andamento">
+                    <ListItemIcon><TodayIcon/></ListItemIcon>
+                    <ListItemText primary="Reservas em Andamento"/>
+                    </ListItem>
+                    <Divider/>
+                    <ListItem component="a" key="Reservas Concluídas" href="/dashboard/reservas-concluidas">
+                    <ListItemIcon><EventAvailableIcon/></ListItemIcon>
+                    <ListItemText primary="Reservas Concluídas" />
+                    </ListItem>
+                    <Divider/>
+                    <ListItem component="a" key="Reservas Canceladas" href="/dashboard/reservas-canceladas">
+                    <ListItemIcon><EventBusyIcon/></ListItemIcon>
+                    <ListItemText primary="Reservas Canceladas" />
+                    </ListItem>
+                    <Divider/>
                 </List>
                 </div>
             </Drawer>
-        </div>
-        <div>
-              <ReservationTable/>
         </div>
         </>
     )

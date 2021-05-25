@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+a{
+  color: gray;
+  
+}
+a:hover{
+  color: darkslategrey;
+}
+
 footer{
   padding: 15px;
   background-color: black;
