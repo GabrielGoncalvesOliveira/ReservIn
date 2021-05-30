@@ -2,8 +2,12 @@ import React from 'react'
 import {DataGrid, GridApi} from '@material-ui/data-grid'
 import {Button, Typography, Grid} from '@material-ui/core'
 
-const ReservationTable = () => {
 
+const changeStatus = () =>{
+
+}
+
+const ReservationTable = ({type}) => {
     const columns = [
         { field: 'id', headerName: 'ID', width: 70 },
         { field: 'firstName', headerName: 'First name', width: 130 },
@@ -23,6 +27,7 @@ const ReservationTable = () => {
           valueGetter: (params) =>
             `${params.getValue('firstName') || ''} ${params.getValue('lastName') || ''}`,
         },
+        (type!=='Canceladas' && type!=='Concluidas')?
         {
             field: "button",
             sortable: "false",
@@ -31,7 +36,7 @@ const ReservationTable = () => {
             disableClickEventBubbling: true,
             renderCell: (params) => {
               const onClick = () => {
-                const api: GridApi = params.api;
+                const api = params.api;
                 const fields = api
                   .getAllColumns()
                   .map((c) => c.field)
@@ -40,15 +45,36 @@ const ReservationTable = () => {
         
                 fields.forEach((f) => {
                   thisRow[f] = params.getValue(f);
+                  if(type === "A Aprovar"){
+                    changeStatus(thisRow[f].id, 1);
+                  }else if(type === "Aprovada"){
+                    changeStatus(thisRow[f].id, 2);
+                  }else if(type === "Andamento"){
+                    changeStatus(thisRow[f].id, 3);
+                  }
+                  
                 });
-        
-                return alert(JSON.stringify(thisRow, null, 4));
               };
+              const onClickCancel = () => {
+                const api = params.api;
+                const fields = api
+                  .getAllColumns()
+                  .map((c) => c.field)
+                  .filter((c) => c !== "__check__" && !!c);
+                const thisRow = {};
         
-              return <><Button onClick={onClick}>Aprovar</Button><Button onClick={onClick}>Rejeitar</Button></>;
+                fields.forEach((f) => {
+                  thisRow[f] = params.getValue(f);
+                  changeStatus(thisRow[f].id, 5);
+                });
+              }
+                if(type !=="Canceladas" && type !=="Concluidas"){
+                  return <><Button onClick={onClick}>Prosseguir</Button><Button onClick={onClickCancel}>Cancelar</Button></>;
+                }
+               
               
             }
-        },
+        }:{}
         
       ];
       
@@ -64,12 +90,11 @@ const ReservationTable = () => {
         { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
       ];
       
-      
     return (
-        <div style={{marginLeft:'65vh', height:438, width:790, marginTop:40}}>
+        <div style={{marginLeft:(type!=='Canceladas' && type!=='Concluidas')?'65vh':'75vh', height:438, width:(type!=='Canceladas'&&type!=='Concluidas')?790:600, marginTop:40}}>
             <Grid container justify="center" style={{marginBottom:20}}>
                 <Grid item>
-                <Typography variant="h4" style={{fontFamily:"'Merienda One', cursive"}}>RESERVAS A APROVAR</Typography>
+                <Typography variant="h4" style={{fontFamily:"'Merienda One', cursive"}}>Reservas {type}</Typography>
                 </Grid>
             </Grid>
             

@@ -4,11 +4,7 @@ import {Link} from 'react-router-dom'
 
 const Header = (headerclass) => {
 
-    
-
-
     return (
-
     <AppBar position="static">
         <Toolbar className='header'>
             
@@ -18,7 +14,7 @@ const Header = (headerclass) => {
             
             <Button className="menu-button" href="/search" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Pesquisa</Button>
             <Button className="menu-button" href="/about" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Sobre Nós</Button>
-            <Button className="menu-button" href="/cadastro" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Cadastro</Button>
+            <Button className="menu-button" href="/register" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Cadastro</Button>
             <Button to="/login" className="menu-button" href="/login" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Login</Button>
         </Toolbar>
     </AppBar>
