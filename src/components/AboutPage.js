@@ -9,13 +9,13 @@ const AboutPage = () => {
             <Grid container justify="center"  direction="row" style={{padding:30}}>
                 <Grid item sm>
                     <Typography variant="h4" align='center' style={{fontFamily: "'Merienda One', cursive"}}>Sobre nós</Typography>
-                    <img src={logo} height="70%" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '45%', }}></img>
+                    <img alt="reservin-logo" src={logo} height="70%" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '45%', }}></img>
                 </Grid>
                 <Grid item sm style={{padding:50}}>
                     
                     <Typography variant="h6" style={{textAlign:"justify", fontFamily:"sans-serif"}}>
                     Somos uma equipe de estudantes da Faculdade de Técnologia de Americana (FATEC) e 
-                    desenvolvemos o ReservIn sob tutoria do preofessor Ivan na matéria de Laboratório
+                    desenvolvemos o ReservIn sob tutoria do professor Ivan Menerval na matéria de Laboratório
                     de Engenharia de Software.
                     </Typography>
                 </Grid>

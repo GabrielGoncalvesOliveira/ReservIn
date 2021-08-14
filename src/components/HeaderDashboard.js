@@ -1,6 +1,6 @@
 import React from 'react'
 import { SidebarData } from './SidebarData'
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core'
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core'
 
 function HeaderDashboard() {
     return (

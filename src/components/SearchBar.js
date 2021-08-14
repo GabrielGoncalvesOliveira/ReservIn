@@ -1,5 +1,5 @@
 import React from 'react'
-import {Input, IconButton, InputAdornment, TextField} from '@material-ui/core'
+import {Input, IconButton, InputAdornment} from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 
 const handleSearch=()=>{
@@ -17,7 +17,7 @@ const SearchBar = () => {
             
             endAdornment={
                 <InputAdornment position="end">
-                    <IconButton onClick={handleSearch}>
+                    <IconButton href='/search' /*onClick={handleSearch}*/>
                         <SearchIcon/>
                     </IconButton>
                 </InputAdornment>

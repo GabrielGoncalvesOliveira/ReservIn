@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid, Paper, Typography} from '@material-ui/core'
+import {Grid, Typography} from '@material-ui/core'
 import SearchBar from './SearchBar'
 import restaurante1 from'../restaurante1.jpg';
 import logo from '../ReservIn.png';
@@ -14,7 +14,7 @@ const IndexBody = () => {
             </Grid>
             <Grid container style={{backgroundColor:"#3C281E", color:"#ffe"}}>
                 <Grid sm item style={{margin:20}}>
-                <img src={restaurante1} style={{borderRadius:8, height:'auto', width:'auto'}}></img>
+                <img alt="restaurant" src={restaurante1} style={{borderRadius:8, height:'auto', width:'auto'}}></img>
                 </Grid>
                 <Grid sm item style={{margin:20}}>
                     

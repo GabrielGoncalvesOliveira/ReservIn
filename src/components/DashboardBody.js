@@ -9,8 +9,8 @@ import EventBusyIcon from '@material-ui/icons/EventBusy'; //cancelada
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { makeStyles } from '@material-ui/core/styles'
-import ReservationTable from './ReservationTable'
-import {Link, BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
+// import ReservationTable from './ReservationTable'
+import {Link} from 'react-router-dom'
 
 
 const drawerWidth = 280;
@@ -66,7 +66,7 @@ const DashboardBody = () => {
         <AppBar position="static" className={classes.appBar}>
                 <Toolbar className='header'>
                     <Typography variant="h6" style={{flexGrow:1, fontFamily: "'Merienda One', cursive"}}>
-                    ReservIn
+                    <Link to="/home" style={{textDecoration: 'none', color:'white'}}>ReservIn</Link>
                     </Typography>
                     <Button className="menu-button" href="/search" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Pesquisa</Button>
                     <Button className="menu-button" href="/about" color="inherit" style={{fontFamily:"'Merienda One', cursive"}}>Sobre Nós</Button>

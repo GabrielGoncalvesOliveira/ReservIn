@@ -1,4 +1,4 @@
-import { Button, Grid, Input, Paper, TextField, Typography } from '@material-ui/core'
+import { Button, Grid, Paper, TextField } from '@material-ui/core'
 import React, { useState } from 'react'
 import logo from '../ReservIn.png'
 
@@ -13,7 +13,7 @@ const Login = () => {
     return (
         <Grid container justify="center" alignItems="center">
             <Paper className="login-box">
-                <form autoComplete >
+                <form autoComplete>
                     <Grid container justify="center" alignItems="center">
                         <img src={logo} alt="logo" width="200" height="180"></img>
                     </Grid>
@@ -30,9 +30,6 @@ const Login = () => {
                 </form>
             </Paper>
         </Grid>
-            
-        
-        
     )
 }
 
